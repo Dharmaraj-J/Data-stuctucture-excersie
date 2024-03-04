@@ -1,3 +1,4 @@
+package searching;
 // Time Complexity = O(log N)
 
 public class BinarySearchPrac {

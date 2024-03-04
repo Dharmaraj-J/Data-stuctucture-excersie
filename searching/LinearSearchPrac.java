@@ -1,3 +1,4 @@
+package searching;
 // Time complexity = O(n)
 
 public class LinearSearchPrac {
