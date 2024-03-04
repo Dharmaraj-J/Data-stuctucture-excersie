@@ -1,10 +1,11 @@
 // Time Complexity = O(N^2)
 
-public class BubbleSortPrac {
+public class SelectionSortPrac {
     public static void main(String[] args) {
 
-        int nums[] = { 4, 8, 2, 10, 1, 45 };
+        int nums[] = { 34, 3, 24, 2, 4, 90 };
         int size = nums.length;
+        int minIndex = 0;
         int temp = 0;
 
         System.out.println("Before Sorting");
@@ -12,14 +13,16 @@ public class BubbleSortPrac {
             System.out.print(num + " ");
         }
 
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size - i - 1; j++) {
-                if (nums[j] > nums[j + 1]) {
-                    temp = nums[j];
-                    nums[j] = nums[j + 1];
-                    nums[j + 1] = temp;
+        for (int i = 0; i < size - 1; i++) {
+            minIndex = i;
+            for (int j = i + 1; j < size; j++) {
+                if (nums[minIndex] > nums[j]) {
+                    minIndex = j;
                 }
             }
+            temp = nums[minIndex];
+            nums[minIndex] = nums[i];
+            nums[i] = temp;
         }
 
         System.out.println();
